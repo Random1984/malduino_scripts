@@ -1,6 +1,6 @@
 # malduino_scripts
 Some Malduino ducky scripts.
-Malduino is an Open Source Arduino based BadUSB that runs RubberDucky scripts emulating a human controlled keyboard and can be purchased at https://malduino.com/
+Malduino is an Open Source Arduino based BadUSB that runs RubberDucky scripts emulating a human controlled keyboard and can be purchased at https://malduino.com/.
 
 A raw ducky script can be converted to be Malduino compatible at [the converter](https://malduino.com/converter/).
 
