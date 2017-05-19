@@ -1,0 +1,154 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>MalDuino Converter</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Use this converter to get your Ducky Scripts ready for the MalDuino Lite and Elite.">
+		<meta name="author" content="Seytonic">
+  
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/skeleton.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		
+		<script src="js/jquery-3.2.1.min.js"></script>
+		
+		<script src="js/filesaver.js"></script>
+		<script src="js/jszip.js"></script>
+		
+		<script src="js/duckuino.js"></script>
+		<script src="js/converter.js"></script>
+		
+	</head>
+	<body>
+		<div id="header">
+			<h1><span class="red">Mal</span>Duino <a href="info.html" id="infoLink">Info</a></h1>
+		</div>
+		
+		<div class="container">
+		
+			<div class="row" id="modelSelection">
+				<div class="modelOption selected" onclick="changeModel(true)" id="lite">
+					<a>LITE</a>
+				</div>
+				<div class="modelOption" onclick="changeModel(false)" id="elite">
+					<a>ELITE</a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="twelve columns">
+					<button onclick="openSettings()" class="left">extras</button>
+					<button onclick="converter.compile()" class="right button-primary">convert</button>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="twelve columns" id="settings">
+						
+						<div class="twelve columns">
+							<div class="one-half column">
+								<label for="convertALTCodes">Convert Special Chars to ALT-Codes</label>
+							</div>
+							<div class="one-half column">
+								<input type="checkbox" name="convertALTCodes" id="convertALTCodes" checked />
+							</div>
+						</div>
+						
+						<div class="twelve columns">
+							<div class="one-half column">
+								<label for="optimize">Optimize Repeating Commands</label>
+							</div>
+							<div class="one-half column">
+								<input type="checkbox" name="optimize" id="optimize" checked />
+							</div>
+						</div>
+						
+						<div class="twelve columns">
+							<div class="one-half column">
+								<label for="delay">Add DELAY 1000 at the Beginning</label>
+							</div>
+							<div class="one-half column">
+								<input type="checkbox" name="delay" id="delay" checked />
+							</div>
+						</div>
+						
+						<div class="twelve columns">
+							<div class="one-half column">
+								<label for="autoCorrect">Command Autocorrection</label>
+							</div>
+							<div class="one-half column">
+								<input type="checkbox" name="autoCorrect" id="autoCorrect" checked />
+							</div>
+						</div>
+						
+						<div class="twelve columns">
+							<div class="one-half column">
+								<label for="deleteComments">Delete Comments</label>
+							</div>
+							<div class="one-half column">
+								<input type="checkbox" name="deleteComments" id="deleteComments" />
+							</div>
+						</div>
+						
+						<div class="twelve columns">
+							<div class="one-half column">
+								<p class="bold">Input to STRING Commands</p>
+							</div>
+							<div class="one-half column">
+								<button onclick="convertToStrings()">convert into string</button>
+							</div>
+						</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="one-half column">
+					<textarea id="input"></textarea>
+				</div>
+				<div class="one-half column">
+					<textarea id="output"></textarea><br />
+				</div>
+			</div>
+			
+			<div class="row">
+				<p id="compilerMsg">Press Convert</p>
+			</div>
+			
+			<div class="row">
+				<div class="twelve columns">
+					<div class="one-half column">
+						<label>Keyboard Layout:
+							<select id="keyboardLayout" name="keyboardLayout">
+								<option value="be_BE">be_BE</option>
+								<option value="cz_CZ">cz_CZ</option>
+								<option value="da_DK">da_DK</option>
+								<option value="de_DE">de_DE</option>
+								<option value="en_US" selected>en_US</option>
+								<option value="es_ES">es_ES</option>
+								<option value="fi_FI">fi_FI</option>
+								<option value="fr_FR">fr_FR</option>
+								<option value="it_IT">it_IT</option>
+								<option value="pt_PT">pt_PT</option>
+								<option value="tr_TR">tr_TR</option>
+							</select>
+						</label>
+					</div>
+					<div class="one-half column">
+						<label>Name:
+							<input type="text" placeholder="example" id="scriptName" />
+							.zip
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<button class="button-primary" id="downloadBtn" onclick="converter.download()">Download</button>
+			</div>
+		</div>
+	</body>
+</html>
