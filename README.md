@@ -6,4 +6,6 @@ A raw ducky script can be converted to be Malduino compatible at [the converter]
 
 The firmware source code *(In .ino format)* for Lite and Elite can be downloaded from [here](https://github.com/Seytonic/malduino/tree/master/firmware).
 
-[**Jiggler.txt**](https://raw.githubusercontent.com/Random1984/malduino_scripts/master/jiggler.txt) - *Emulate a keypress to keep a system awake for forensics purpose.*
+[**jiggler.txt**](https://raw.githubusercontent.com/Random1984/malduino_scripts/master/jiggler.txt) - *Emulate a keypress to keep a system awake for forensics purpose.*
+
+[**empire_launcher.md**](https://github.com/Random1984/malduino_scripts/blob/master/empire_launcher.md) - *Create a [Powershell Empire](https://github.com/EmpireProject/Empire) launcher to be fastly typed as a keyboard on target's system once connected.*
